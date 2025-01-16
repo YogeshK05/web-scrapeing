@@ -21,7 +21,7 @@ const scrape = async () => {
                 const price = book.querySelector('.price_color').textContent;
                 const stock = book.querySelector('.instock.availability') ? 'In Stock' : 'Out Of Stock';
                 const rating = book.querySelector('.star-rating').className.split(' ')[1];
-                const link = book.querySelector('h3 a').getAttribute('href');
+                const link = "https://books.toscrape.com/catalogue/" + book.querySelector('h3 a').getAttribute('href');
 
                 return { title, price, stock, rating, link }
             });
